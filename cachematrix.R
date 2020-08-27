@@ -13,6 +13,10 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
+# we have set the makeCacheMatrix function and 
+# initialized the reuqired values.
+# we will call this function while working, and pass our original matrix as input
+
 cacheSolve <- function(x, ...) {
   i <- x$getinverse()
   if (!is.null(i)) {
@@ -24,3 +28,6 @@ cacheSolve <- function(x, ...) {
   x$setinverse(i)
   i
 }
+
+# the cacheSolve function, by usingthe solve() function,
+# will return and cache the value of the inverse matrix
